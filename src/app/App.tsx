@@ -1,12 +1,12 @@
-import React, {Suspense, useState} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
-import {MainPageAsync} from "./pages/MainPage/MainPage.async";
-import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
+import React from 'react';
+import {Link} from 'react-router-dom';
+
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
 import {themeDark, themeLight} from "./styles/themes/theme";
 import {RootContainer} from "./styles/styles";
-import {useTheme} from "./theme/useTheme";
+import {useTheme} from "app/providers/ThemeProvider";
+import {AppRouter} from "app/providers/router";
 
 export enum Theme {
     LIGHT = 'LIGHT',
@@ -18,17 +18,12 @@ const App = () => {
     return (
         <>
             <GlobalStyles/>
-            <ThemeProvider theme={theme === Theme.LIGHT? themeLight: themeDark}>
+            <ThemeProvider theme={theme === Theme.LIGHT? themeLight : themeDark}>
                 <RootContainer>
                     <button onClick={toggleTheme}>click me</button>
                     <Link to={'/'}>Главная</Link>
                     <Link to={'/about'}>О сайте</Link>
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <Routes>
-                            <Route path={'/'} element={<MainPageAsync/>}/>
-                            <Route path={'/about'} element={<AboutPageAsync/>}/>
-                        </Routes>
-                    </Suspense>
+                    <AppRouter/>
                 </RootContainer>
             </ThemeProvider>
         </>
