@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
@@ -7,6 +6,7 @@ import {themeDark, themeLight} from "./styles/themes/theme";
 import {RootContainer} from "./styles/styles";
 import {useTheme} from "app/providers/ThemeProvider";
 import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
 
 export enum Theme {
     LIGHT = 'LIGHT',
@@ -20,9 +20,8 @@ const App = () => {
             <GlobalStyles/>
             <ThemeProvider theme={theme === Theme.LIGHT? themeLight : themeDark}>
                 <RootContainer>
+                    <Navbar/>
                     <button onClick={toggleTheme}>click me</button>
-                    <Link to={'/'}>Главная</Link>
-                    <Link to={'/about'}>О сайте</Link>
                     <AppRouter/>
                 </RootContainer>
             </ThemeProvider>

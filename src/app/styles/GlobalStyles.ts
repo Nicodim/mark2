@@ -12,8 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     font: 16px/1.5 "Nunito Sans", sans-serif;
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 

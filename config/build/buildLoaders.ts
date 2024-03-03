@@ -29,7 +29,8 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                     [
                         "babel-plugin-styled-components",
                         {
-                            displayName: false
+                            displayName: true,
+                            fileName: false
                         }
                     ],
                 ]
