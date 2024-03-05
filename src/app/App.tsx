@@ -13,15 +13,15 @@ export enum Theme {
     DARK = 'DARK'
 }
 const App = () => {
-    const {theme, toggleTheme} = useTheme()
-
+    const {theme} = useTheme()
     return (
         <>
             <GlobalStyles/>
             <ThemeProvider theme={theme === Theme.LIGHT? themeLight : themeDark}>
                 <RootContainer>
                     <Navbar/>
-                    <button onClick={toggleTheme}>click me</button>
+                    {/*<button onClick={toggleTheme}>click me</button>*/}
+
                     <AppRouter/>
                 </RootContainer>
             </ThemeProvider>
