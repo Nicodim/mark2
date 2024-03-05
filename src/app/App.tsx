@@ -20,8 +20,6 @@ const App = () => {
             <ThemeProvider theme={theme === Theme.LIGHT? themeLight : themeDark}>
                 <RootContainer>
                     <Navbar/>
-                    {/*<button onClick={toggleTheme}>click me</button>*/}
-
                     <AppRouter/>
                 </RootContainer>
             </ThemeProvider>
