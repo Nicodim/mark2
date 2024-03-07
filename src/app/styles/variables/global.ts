@@ -1,5 +1,3 @@
-
-
 export const FONTSIZE_S = '12px'
 export const FONTSIZE_M = '24px'
 export const FONTSIZE_L = '32px'
@@ -92,4 +90,3 @@ export const SIDEBAR_WIDTH_COLLAPSED = '80px'
 //     font-weight: 300;
 //   }
 // }
-

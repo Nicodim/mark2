@@ -1,19 +1,19 @@
-import styled, {css} from "styled-components";
-import {NAVBAR_HEIGHT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_COLLAPSED} from "app/styles/variables/global";
+import styled, { css } from 'styled-components'
+import { NAVBAR_HEIGHT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_COLLAPSED } from 'app/styles/variables/global'
 
 export interface SidebarBoxProps {
-    collapsed?: boolean;
+  collapsed?: boolean
 }
 
 export const SidebarBox = styled.div<SidebarBoxProps>`
   height: calc(100vh - ${NAVBAR_HEIGHT});
   width: ${SIDEBAR_WIDTH};
-  background: ${({theme}) => theme.background.invertedBgColor};
+  background: ${({ theme }) => theme.background.invertedBgColor};
   position: relative;
   transition: width 0.3s;
 
 
-  ${({collapsed}) => collapsed &&
+  ${({ collapsed }) => collapsed &&
           css`
             width: ${SIDEBAR_WIDTH_COLLAPSED};
           `}

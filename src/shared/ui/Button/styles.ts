@@ -1,19 +1,19 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components'
 
 export enum ThemeButton {
-    CLEAR = 'clear',
+  CLEAR = 'clear',
 }
 
 export interface ButtonStyleProps {
-    themeBtn?: ThemeButton;
+  themeBtn?: ThemeButton
 }
 
 export const StyledButton = styled.button<ButtonStyleProps>`
-  color: ${({theme}) => theme.colors.invertedPrimaryColor};
+  color: ${({ theme }) => theme.colors.invertedPrimaryColor};
   cursor: pointer;
 
-  ${({themeBtn}) =>
-          themeBtn === ThemeButton.CLEAR &&
+  ${({ themeBtn }) =>
+        themeBtn === ThemeButton.CLEAR &&
           css`
             padding: 0;
             border: none;
