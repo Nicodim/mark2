@@ -23,7 +23,6 @@ export const GlobalStyles = createGlobalStyle`
     button,
     textarea,
     select {
-      margin: 0;
       font: inherit;
     }
 

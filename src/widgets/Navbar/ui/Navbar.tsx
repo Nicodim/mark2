@@ -1,15 +1,15 @@
 import React from 'react';
 import {Links, MainLink, NavbarBox} from "./styles";
 import AppLink from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import {useTranslation} from "react-i18next";
 
 export const Navbar = () => {
+   const {t} = useTranslation()
     return (
         <NavbarBox>
-            <ThemeSwitcher/>
             <Links>
-                <MainLink inverted to={'/'}>Главная</MainLink>
-                <AppLink inverted to={'/about'}>О сайте</AppLink>
+                <MainLink inverted to={'/'}>{t('Main page')}</MainLink>
+                <AppLink inverted to={'/about'}>{t('About page')}</AppLink>
             </Links>
         </NavbarBox>
     );

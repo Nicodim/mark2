@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: FC<ButtonProps> = (props) => {
     const {children,themeBtn,...otherProps} = props;
     return (
-        <StyledButton {...otherProps} themeBtn={themeBtn}>
+        <StyledButton {...otherProps} themeBtn={ThemeButton.CLEAR}>
             {children}
         </StyledButton>
     );

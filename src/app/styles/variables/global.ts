@@ -5,6 +5,9 @@ export const FONTSIZE_M = '24px'
 export const FONTSIZE_L = '32px'
 
 export const NAVBAR_HEIGHT = '50px'
+export const SIDEBAR_WIDTH = '300px'
+export const SIDEBAR_WIDTH_COLLAPSED = '80px'
+
 // #root {
 //   font-family: consolas, "Times New Roman", serif;
 //   font-family-text-redesigned: "Nunito Sans", sans-serif;

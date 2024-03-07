@@ -9,14 +9,13 @@ export interface ButtonStyleProps {
 }
 
 export const StyledButton = styled.button<ButtonStyleProps>`
-  
+  color: ${({theme}) => theme.colors.primaryColor};
   cursor: pointer;
 
   ${({themeBtn}) =>
           themeBtn === ThemeButton.CLEAR &&
           css`
             padding: 0;
-            margin: 0;
             border: none;
             background: none;
             outline: none;
