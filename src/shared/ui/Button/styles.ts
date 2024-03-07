@@ -9,7 +9,7 @@ export interface ButtonStyleProps {
 }
 
 export const StyledButton = styled.button<ButtonStyleProps>`
-  color: ${({theme}) => theme.colors.primaryColor};
+  color: ${({theme}) => theme.colors.invertedPrimaryColor};
   cursor: pointer;
 
   ${({themeBtn}) =>

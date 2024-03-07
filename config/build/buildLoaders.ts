@@ -38,6 +38,13 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                             fileName: false
                         }
                     ],
+                    [
+                        "i18next-extract",
+                        {
+                            locales: ['ru', 'en'],
+                            keyAsDefaultValue: true
+                        }
+                    ]
                 ]
             }
         }
@@ -53,10 +60,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     }
 
     return [
-        babelLoader,
-        typescriptLoader,
         fileLoader,
         svgLoader,
+        babelLoader,
+        typescriptLoader,
         cssLoader
     ]
 }
