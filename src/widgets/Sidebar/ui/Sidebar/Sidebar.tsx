@@ -11,7 +11,7 @@ const Sidebar = () => {
   }
   return (
         <SidebarBox collapsed={isCollapsed || undefined}>
-          <button onClick={onToggle}>toggle</button>
+          <button onClick={onToggle}></button>
           <Switchers>
                 <ThemeSwitcher/>
                 <LangSwitcher/>
