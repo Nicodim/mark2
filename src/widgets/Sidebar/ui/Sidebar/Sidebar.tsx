@@ -11,12 +11,12 @@ const Sidebar = () => {
   }
   return (
         <SidebarBox collapsed={isCollapsed || undefined}>
-          <button onClick={onToggle}></button>
-          <Switchers>
+            <button onClick={onToggle}></button>
+            <Switchers>
                 <ThemeSwitcher/>
                 <LangSwitcher/>
             </Switchers>
-      </SidebarBox>
+        </SidebarBox>
   )
 }
 

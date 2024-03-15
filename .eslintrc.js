@@ -1,37 +1,40 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+    env: {
+        browser: true,
+        es2021: true,
+        jest: true
     },
-    "extends": [
+    extends: [
         "standard-with-typescript",
         "plugin:react/recommended",
         "plugin:i18next/recommended"
     ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
+    ignorePatterns: [
+        '.eslintrc.js',
+        'jest.config.ts',
+        'buildDevServer.ts',
+        'buildResolvers.ts',
+        'buildLoaders.ts',
+        'buildPlugins.ts',
+        'webpack.config.ts',
+        'config.ts',
+        'buildWebpackConfig.ts'
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
     },
-    "plugins": [
+    plugins: [
         "react",
         "@typescript-eslint",
         "i18next"
     ],
-    "rules": {
+
+    rules: {
         // "react/jsx-indent": [2, 4],
         // "react/jsx-indent-props": [2, 4],
         // indent: [2, 4],
@@ -64,4 +67,16 @@ module.exports = {
         // __API__: true,
         // __PROJECT__: true,
     },
+    // overrides: [
+    //     {
+    //         "env": {
+    //             "node": true
+    //         },
+    //         "files": ['*.ts', '*.tsx'],
+    //         "parserOptions": {
+    //             "sourceType": "script",
+    //             "project": ['./tsconfig.json']
+    //         }
+    //     },
+    // ],
 }
