@@ -62,7 +62,7 @@ module.exports = {
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-misused-promises': 'warn',
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid']}],
         'max-len': ['error', {ignoreComments: true, code: 100}]
     },
     globals: {
@@ -70,4 +70,12 @@ module.exports = {
         // __API__: true,
         // __PROJECT__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ]
 }
