@@ -10,8 +10,8 @@ const Sidebar = () => {
     setIsCollapsed(prev => !prev)
   }
   return (
-        <SidebarBox collapsed={isCollapsed || undefined}>
-            <button onClick={onToggle}></button>
+        <SidebarBox data-testid='sidebar' collapsed={isCollapsed || undefined}>
+            <button data-testid="sidebar-toggle" onClick={onToggle}></button>
             <Switchers>
                 <ThemeSwitcher/>
                 <LangSwitcher/>

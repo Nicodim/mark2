@@ -18,7 +18,9 @@ module.exports = {
         'buildPlugins.ts',
         'webpack.config.ts',
         'config.ts',
-        'buildWebpackConfig.ts'
+        'buildWebpackConfig.ts',
+        'setupTests.ts',
+        'jestEmptyComponent.tsx'
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -60,23 +62,12 @@ module.exports = {
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-misused-promises': 'warn',
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'max-len': ['error', {ignoreComments: true, code: 100}]
     },
     globals: {
         __IS_DEV__: true,
         // __API__: true,
         // __PROJECT__: true,
     },
-    // overrides: [
-    //     {
-    //         "env": {
-    //             "node": true
-    //         },
-    //         "files": ['*.ts', '*.tsx'],
-    //         "parserOptions": {
-    //             "sourceType": "script",
-    //             "project": ['./tsconfig.json']
-    //         }
-    //     },
-    // ],
 }
